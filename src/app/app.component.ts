@@ -9,7 +9,9 @@ import { User } from './model/user.model';
 export class AppComponent {
   title = 'group-project-angulaar';
 
+  user: User;
+
   onTakeUser(user: User) {
-    console.log(user);
+    this.user = user;
   }
 }

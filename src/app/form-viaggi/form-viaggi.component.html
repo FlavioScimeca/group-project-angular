@@ -1,1 +1,39 @@
-<p>form-viaggi works!</p>
+<div class="container">
+  <h2 class="text-center fs-2">Form Viaggio</h2>
+  <div class="row">
+    <div
+      *ngIf="userForm != undefined; else emptyUser"
+      class="col-10 col-md-8 mx-auto"
+    >
+      <div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Titolo</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">prezzo</label>
+          <input type="number" class="form-control" id="exampleInputEmail1" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Immagine</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >descrizione</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+        <button (click)="onStamp()" class="btn btn-success">Add</button>
+      </div>
+    </div>
+
+    <ng-template #emptyUser>
+      <p class="text-center fw-bold">Effettua prima il Login</p>
+    </ng-template>
+  </div>
+</div>
