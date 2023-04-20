@@ -1,2 +1,6 @@
 <p>lista-viaggi works!</p>
-<app-viaggio></app-viaggio>
+<ul>
+  <li *ngFor="let viaggio of viaggi">
+    <app-viaggio [viaggio]="viaggio"></app-viaggio>
+  </li>
+</ul>

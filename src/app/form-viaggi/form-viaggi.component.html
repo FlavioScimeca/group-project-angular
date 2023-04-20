@@ -8,21 +8,37 @@
       <div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Titolo</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" />
+          <input
+            [(ngModel)]="titolo"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+          />
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">prezzo</label>
-          <input type="number" class="form-control" id="exampleInputEmail1" />
+          <input
+            [(ngModel)]="prezzo"
+            type="number"
+            class="form-control"
+            id="exampleInputEmail1"
+          />
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Immagine</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" />
+          <input
+            [(ngModel)]="immagine"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+          />
         </div>
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label"
             >descrizione</label
           >
           <textarea
+            [(ngModel)]="descrizione"
             class="form-control"
             id="exampleFormControlTextarea1"
             rows="3"

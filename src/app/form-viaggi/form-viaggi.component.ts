@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { User } from '../model/user.model';
+import { Viaggio } from '../model/viaggio.model';
 
 @Component({
   selector: 'app-form-viaggi',
@@ -8,8 +9,20 @@ import { User } from '../model/user.model';
 })
 export class FormViaggiComponent {
   @Input() userForm: User;
-
+  @Output() createTravel = new EventEmitter<Viaggio>();
+  titolo: string;
+  prezzo: number;
+  descrizione: string;
+  immagine: string;
   onStamp() {
-    console.log(this.userForm);
+    this.createTravel.emit(
+      new Viaggio(
+        this.titolo,
+        this.prezzo,
+        this.descrizione,
+        this.immagine,
+        this.userForm
+      )
+    );
   }
 }

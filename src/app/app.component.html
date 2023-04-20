@@ -1,7 +1,10 @@
-<app-lista-viaggi></app-lista-viaggi>
+<app-lista-viaggi [viaggi]="viaggi"></app-lista-viaggi>
 <hr />
 <app-form-user (craeteUser)="onTakeUser($event)"></app-form-user>
 
 <hr />
 
-<app-form-viaggi [userForm]="user"></app-form-viaggi>
+<app-form-viaggi
+  (createTravel)="onTravel($event)"
+  [userForm]="user"
+></app-form-viaggi>
